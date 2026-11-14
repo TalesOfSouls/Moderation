@@ -1,0 +1,22 @@
+# Moderation tool on its own (without the other services of ../Docker)
+#   cd Moderation
+#   docker compose up
+# Then open http://127.0.0.7 (only reachable from this computer)
+#
+# The complete setup (website + moderation + ...) is in ../Docker/docker-compose.yml,
+# do not start both at the same time, they use the same address.
+
+services:
+  tos_moderation:
+    image: node:24-slim
+    working_dir: /var/moderation
+    command: ["node", "--watch", "server.js"]
+    ports:
+      - "127.0.0.7:80:8090"
+    environment:
+      HOST: 0.0.0.0
+      PORT: 8090
+      TOS_DB: /var/www/website/TalesOfSouls.db
+    volumes:
+      - ./:/var/moderation
+      - ./../Website/:/var/www/website
