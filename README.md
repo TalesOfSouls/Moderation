@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Tales of Souls – Moderation
 
 Internal tool for the team. Players never see it. It runs on Node.js (version 22.5 or newer) and has **no npm dependencies**: just
@@ -158,3 +159,6 @@ It also creates inventories for all characters, accounts and guilds, quest progr
 The player who asked the support about a lost lantern is stuck at "Recover the old lantern" in *The Ghost Paths*.
 
 Because the data is relative to the time of the seed, run it again before a demo after a few days.
+=======
+# Moderation
+>>>>>>> 062c28756aef74bc63b5511d643ce19c6bcec317
